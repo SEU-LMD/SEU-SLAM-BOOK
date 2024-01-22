@@ -1,0 +1,1 @@
+这个程序是用来显示我们自己的pose_graph算法的结果，数据格式使用的是copslam数据格式。这个程序也是根据copslam的matlab代码进行更改的。

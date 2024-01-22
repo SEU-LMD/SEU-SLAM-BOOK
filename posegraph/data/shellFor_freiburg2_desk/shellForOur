@@ -1,0 +1,16 @@
+echo 'StateRobot'
+cd /media/fyy/data/SLAM_Dataset/TUM/tool
+echo 'LM-Absolute'
+./evaluate_ate.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/Our_LM.txt
+echo 'LM-Relative'
+./evaluate_rpe.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/Our_LM.txt
+
+echo 'GN-Absolute'
+./evaluate_ate.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/Our_GN.txt
+echo 'GN-Relative'
+./evaluate_rpe.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/Our_GN.txt
+
+echo 'DL-Absolute'
+./evaluate_ate.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/Our_DL.txt
+echo 'DL-Relative'
+./evaluate_rpe.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/Our_DL.txt

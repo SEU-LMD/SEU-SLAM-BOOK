@@ -1,0 +1,36 @@
+一,评测freiburg1_room数据集
+1.VO
+cd /media/fyy/data/SLAM_Dataset/TUM/tool
+//绝对误差
+./evaluate_ate.py /home/fyy/Documents/my_code/posegraph/data/freiburg1_room_gt.txt /home/fyy/Documents/my_code/posegraph/data/freiburg1_room_freiburg1_room_CameraTrajectory.txt
+//相对误差
+./evaluate_rpe.py /home/fyy/Documents/my_code/posegraph/data/freiburg1_room_gt.txt /home/fyy/Documents/my_code/posegraph/data/freiburg1_room_freiburg1_room_CameraTrajectory.txt
+
+二,评测freiburg2_desk数据集
+1.VO
+//绝对误差
+./evaluate_ate.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_CameraTrajectory.txt
+//相对误差
+./evaluate_rpe.py /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_gt.txt /home/fyy/Documents/my_code/posegraph/data/freiburg2_desk_CameraTrajectory.txt
+
+三,评测freiburg3_long_office_household数据集
+1.VO
+cd /media/fyy/data/SLAM_Dataset/TUM/tool
+//绝对误差
+./evaluate_ate.py /home/fyy/Documents/my_code/posegraph/data/freiburg3_long_office_gt.txt /home/fyy/Documents/my_code/posegraph/data/freiburg3_long_office_CameraTrajectory.txt
+//相对误差
+./evaluate_rpe.py /home/fyy/Documents/my_code/posegraph/data/freiburg3_long_office_gt.txt /home/fyy/Documents/my_code/posegraph/data/freiburg3_long_office_CameraTrajectory.txt
+
+
+2.CERES
+cd /home/fyy/Documents/my_code/posegraph/data/shell
+./shellForCERES
+3.ORB
+cd /home/fyy/Documents/my_code/posegraph/data/shell
+./shellForORB
+4.GTSAM
+cd /home/fyy/Documents/my_code/posegraph/data/shell
+./shellForGTSAM
+5.StateRobot
+cd /home/fyy/Documents/my_code/posegraph/data/shell
+./shellForStateRobot
