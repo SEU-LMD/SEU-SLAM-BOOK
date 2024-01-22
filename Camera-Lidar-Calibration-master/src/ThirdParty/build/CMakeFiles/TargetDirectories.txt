@@ -1,3 +1,0 @@
-/home/xuan/catkin_ws/src/camera_calibration/src/ThirdParty/build/CMakeFiles/edit_cache.dir
-/home/xuan/catkin_ws/src/camera_calibration/src/ThirdParty/build/CMakeFiles/rebuild_cache.dir
-/home/xuan/catkin_ws/src/camera_calibration/src/ThirdParty/build/CMakeFiles/KITTICornerDetection.dir
