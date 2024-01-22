@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>  
+  <!-- 只启动velodyne和激光传感器 -->
+  <node name="tf" pkg="static_transform_publisher" type="static_transform_publisher" args="0 0 0 0 0 0 1 mynteye_left_fraeme velodyne 10" required="true">  
+  </node>
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+  </include>
+  
+  <include file="$(find mynt_eye_ros_wrapper)/launch/mynteye.launch">
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-f velodyne -d $(find camera_lidar_sample_data)/launch/config.rviz" required="true">  
+  </node>
+   
+
+</launch>

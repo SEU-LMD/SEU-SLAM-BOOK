@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>  
+  <!--arg name="save_path" value="/mnt/Data/data/"/-->
+ 
+    <arg name="path" value="/home/xuan/caiji-catkin_ws/src/lidar_camera_sample_data/"/>
+  
+  <!--node pkg="camera_lidar_sample_data" type="camera_lidar_sample_data" name="camera_lidar_sample_data" respawn="true" output="screen">
+  </node-->
+  
+  <node pkg="camera_lidar_sample_data" type="read" name="read" respawn="false" output="screen">
+   <param name="root_path" type="string" value="$(arg path)" />
+  </node> 
+ 
+   <!--include file="$(find aloam_velodyne)/launch/aloam_velodyne_VLP_16.launch">
+  </include--> 
+   <!--node name="rviz" pkg="rviz" type="rviz" args="-f velodyne -d $(find camera_lidar_sample_data)/launch/config.rviz" required="true">  
+  </node-->
+  
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>  
+    
+  <node pkg="unicore" type="unicore_node" name="unicore_node" respawn="true" output="screen">
+  </node>
+  
+</launch>

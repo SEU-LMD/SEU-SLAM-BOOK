@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>  
+  <!-- 保存数据用的根目录
+  -->
+  <arg name="path" value="/home/xuan/caiji-catkin_ws/src/lidar_camera_sample_data/"/>
+    <arg name="ifgnss" value="1"/>  <!-- 0無GNSS，1有GNSS-->
+  
+  <!--node name="tf" pkg="static_transform_publisher" type="static_transform_publisher" args="0 0 0 0 0 0 1 map velodyne 10" required="true">  
+  </node-->
+  
+  <!-- 直接使用mynteye和velodyne提供的launch文件启动设备（还有imu） -->
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+  </include>
+ <!--include file="$(find velodyne_pointcloud)/launch/VLP-32C_points.launch">
+</include-->
+  <!--include file="$(find aloam_velodyne)/launch/aloam_velodyne_VLP_16.launch">
+  </include--> 
+  <include file="$(find mynt_eye_ros_wrapper)/launch/mynteye.launch">
+  </include>
+  <!--include file="$(find zed_wrapper)/launch/zed2.launch">
+  </include-->
+  <include file="$(find unicore)/launch/startgnssimu.launch">
+  </include>
+  
+  
+  <node pkg="camera_lidar_sample_data" type="camera_lidar_sample_data" name="camera_lidar_sample_data" respawn="false" output="screen">
+  </node>
+  
+  <node pkg="camera_lidar_sample_data" type="visualizer" name="visualizer" respawn="false" output="screen">
+  <param name="rootpath" type="string" value="$(arg path)" />
+  </node>
+ 
+  <node name="rviz" pkg="rviz" type="rviz" args="-f velodyne -d $(find camera_lidar_sample_data)/launch/config.rviz" required="true">  
+  </node>
+  
+</launch>
