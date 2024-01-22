@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>  
+
+  <node pkg="camera_calibration" type="camera_calibration" name="camera_calibration" respawn="false" output="screen">
+    <param name="lidar_config_path" type="string" value="/home/xuan/catkin_ws/src/camera_calibration/conf/NDTConfig.txt" />
+    <param name="root" type="string" value="/home/xuan/catkin_ws/src/camera_calibration/src/data" />
+    <param name="path_Extrinsic" type="string" value="/home/xuan/catkin_ws/src/camera_calibration/conf/Extrinsic.txt" />
+    <param name="ExtraData_path" type="string" value="/home/xuan/catkin_ws/src/lidar_camera_sample_data/cal_data/" />
+    <param name="IntrincMatrix" type="int" value="1" />
+    <param name="Extrinsic" type="int" value="1" />
+    <param name="UseExtraData" type="int" value="1" />
+  </node>  
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find camera_calibration)/launch/test.rviz" />
+</launch>

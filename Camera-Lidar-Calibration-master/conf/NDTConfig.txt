@@ -1,0 +1,5 @@
+ndt_res 1
+filter 1
+leaf_size 0.1
+angle_th 15
+curv_th 0.05
